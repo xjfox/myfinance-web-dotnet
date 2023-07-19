@@ -1,0 +1,39 @@
+﻿@using myfinance_web_netcore.Models.Domain
+@model TransacaoModel
+
+@{
+    ViewData["Title"] = ((Model.Id == null) ? "Nova" : "Editar") + " Transação Financeira";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+</div>
+
+<form id="plano-conta-cadastro__form" asp-controller="Transacao" asp-action="Cadastro" method="POST">
+    <input type="hidden" class="form-control" asp-for="Id">   
+
+    <div class="mb-3">
+        <label class="form-label" for="Descricao">Data</label>
+        <input type="date" class="form-control" asp-for="Data" placeholder="Data" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="Descricao">Valor</label>
+        <input type="text" class="form-control" asp-for="Valor" placeholder="Valor" required>
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="Historico">Item Plano Conta</label>
+        @Html.DropDownListFor(m => m.PlanoContaId, Model.PlanoContas, new { @class = "form-select" })
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="Historico">Histórico</label>
+        <input type="text" class="form-control" asp-for="Historico" placeholder="Historico">
+    </div>
+
+    <div class="mb-3">
+        @Html.Partial("Forms/_SubmitAndBackButtons")
+    </div>
+</form>
+<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>

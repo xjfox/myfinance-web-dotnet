@@ -1,0 +1,40 @@
+@using myfinance_web_netcore.Models.Domain
+
+@{
+    ViewData["Title"] = "Plano de Contas";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+</div>
+
+<a class="btn btn-info" asp-controller="PlanoConta" asp-action="Cadastro">Novo Plano de Conta</a>
+
+<hr />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th style="width: 50px;">Id</th>
+            <th>Descrição</th>
+            <th>Tipo</th>
+            <th style="width: 160px;">#</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var item in (List<PlanoContaModel>)ViewBag.ListaPlanoConta)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Descricao</td>
+                    <td>@item.Tipo</td>
+                    <td>
+                        <a asp-controller="PlanoConta" asp-action="Cadastro" asp-route-id="@item.Id" class="btn btn-warning">Editar</a>
+                        @Html.Partial("Forms/_ConfirmRemoveButton", @item.ConfirmRemoveButtonParams())
+                    </td>
+                </tr>
+            }
+        }            
+    </tbody>
+</table>

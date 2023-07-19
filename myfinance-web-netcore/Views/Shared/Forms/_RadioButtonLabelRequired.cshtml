@@ -1,0 +1,27 @@
+@model dynamic
+
+<div id="@(Model.FieldName + "__label-error")">@Model.Message</div>
+
+<script>
+    var labelError = document.getElementById('@(Model.FieldName + "__label-error")');
+    var form = labelError.closest('form');
+    
+    form.onsubmit = function(e) {
+        var radios = document.getElementsByClassName('@(Model.FieldName + "__radio-button")');
+        var isChecked = false;
+
+        for (var i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                isChecked = true;
+                break;
+            }
+        }
+
+        if (!isChecked) {
+            e.preventDefault();
+            labelError.style.display = 'block';
+        } else {
+            labelError.style.display = 'none';
+        }
+    };
+</script>

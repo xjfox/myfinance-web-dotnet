@@ -1,0 +1,11 @@
+@model ConfirmRemoveButtonParamsModel
+
+@{
+    var hash = Guid.NewGuid().ToString();
+    var buttonId = hash + "__btn-excluir";
+    var controller = Model.Controller;
+    var action = Model.Action;
+    var confirmMessage = "return confirm('" + Model.ConfirmMessage + "');";
+}
+
+@Html.ActionLink("Excluir", action, controller, new { Id = Model.Id }, new { @class = "btn btn-danger", @id = buttonId, @onclick = confirmMessage })

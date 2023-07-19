@@ -1,0 +1,31 @@
+﻿@using myfinance_web_netcore.Models.Domain
+@model PlanoContaModel
+
+@{
+    ViewData["Title"] = ((Model.Id == null) ? "Novo" : "Editar") + " Plano de Conta";
+}
+
+<div class="text-center">
+    <h1 class="display-4">@ViewData["Title"]</h1>
+</div>
+
+<form id="plano-conta-cadastro__form" asp-controller="PlanoConta" asp-action="Cadastro" method="POST">
+    <input type="hidden" class="form-control" asp-for="Id">    
+
+    <div class="mb-3">
+        <label class="form-label" for="Descricao">Descrição</label>
+        <input type="text" class="form-control" asp-for="Descricao" placeholder="Descrição" required>
+        @Html.ValidationMessageFor(m => m.Descricao)
+    </div>
+
+    <div class="mb-3">
+        <label>@Html.RadioButtonFor(m => m.Tipo, "D", new { @class = "plano-conta-tipo__radio-button" }) Despesa</label>
+        <label>@Html.RadioButtonFor(m => m.Tipo, "R", new { @class = "plano-conta-tipo__radio-button" }) Receita</label>
+        @Html.Partial("Forms/_RadioButtonLabelRequired", new { FieldName = "plano-conta-tipo", Message = "Selecione o tipo de conta." })
+    </div>
+    
+    <div class="mb-3">
+        @Html.Partial("Forms/_SubmitAndBackButtons")
+    </div>
+</form>
+<p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>

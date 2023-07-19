@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EKSwPKhdCCQcPmrmwyk6ZWJKtpahTN3G9QIc/2xRJW8=",
+  "Hash": "XO0a9q8d3B7GsR6CZNXmg7slXef6n0/4gZAGEOnyr2w=",
   "Source": "myfinance-web-netcore",
   "BasePath": "_content/myfinance-web-netcore",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\myfinance-web-netcore.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\wwwroot\\css\\form.styles.css",
+      "SourceId": "myfinance-web-netcore",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\wwwroot\\",
+      "BasePath": "_content/myfinance-web-netcore",
+      "RelativePath": "css/form.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\form.styles.css"
     },
     {
       "Identity": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\wwwroot\\css\\site.css",

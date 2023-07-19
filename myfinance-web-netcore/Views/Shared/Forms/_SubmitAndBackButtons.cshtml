@@ -1,0 +1,13 @@
+@{
+    var hash = Guid.NewGuid().ToString();
+    var buttonId = hash + "__btn-voltar";
+}
+
+<button type="button" id="@buttonId" class="btn" style="display:none;" onclick="history.back();">Voltar</button>
+<button type="submit" class="btn btn-primary">Salvar</button>
+
+<script>
+    if (document.referrer.indexOf(window.location.hostname) != -1) {
+        document.getElementById('@buttonId').style.display = 'inline';
+    }
+</script>

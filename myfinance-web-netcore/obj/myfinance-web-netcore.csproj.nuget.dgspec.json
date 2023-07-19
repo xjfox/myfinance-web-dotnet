@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj": {}
+    "d:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj": {}
   },
   "projects": {
-    "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj": {
+    "d:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj",
+        "projectUniqueName": "d:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj",
         "projectName": "myfinance-web-netcore",
-        "projectPath": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj",
+        "projectPath": "d:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\myfinance-web-netcore.csproj",
         "packagesPath": "C:\\Users\\borgt\\.nuget\\packages\\",
-        "outputPath": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\obj\\",
+        "outputPath": "d:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\borgt\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -38,6 +38,20 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[2.5.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.5.23280.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.0-preview.5.23280.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

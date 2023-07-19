@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\myfinance-web-netcore.bundle.scp.css"
     },
     {
+      "Id": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\wwwroot\\css\\form.styles.css",
+      "PackagePath": "staticwebassets\\css\\form.styles.css"
+    },
+    {
       "Id": "D:\\PUC\\DEV\\myfinance-web-dotnet\\myfinance-web-netcore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
