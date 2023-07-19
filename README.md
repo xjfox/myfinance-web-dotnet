@@ -17,10 +17,12 @@ Para rodar o projeto, você precisará dos seguintes requisitos:
 Para instalar o projeto, siga os seguintes passos:
 
 1. Clone o projeto em um diretório:
+
     ```bash
     git clone https://github.com/xjfox/myfinance-web-dotnet.git
     ```
 2. Execute o arquivo `docs/database-setup.sql` no Microsoft SQL Server Management Studio para criar o banco de dados e as tabelas necessárias.
+
 3. Navegue até a pasta do projeto .NET:
     ```bash
     cd myfinance-web-netcore
@@ -28,6 +30,7 @@ Para instalar o projeto, siga os seguintes passos:
 4. Configure o acesso ao banco de dados:
     - Copie o arquivo `Config/database.env.example` para `Config/database.env`.
     - Edite o arquivo `Config/database.env` e, na variável `SERVER`, substitua o valor `{HOSTNAME}` pelo seu servidor.
+
 5. Execute o comando de build:
     ```bash
     dotnet build
